@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Test1 HTML</h1>
+<button id="btn">CLICK</button>
+
+<div id="result">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    //이코드를 넣은뒤면, 아래에서 $로 간단하게 다른것들도 실행 가능해짐
+</script>
+
+<script>
+
+    console.log($)
+    $("#btn").on("click", function(){//$()document.querySelector를 쓴거나 다름없다.
+        $.getJSON("/time", null, function(data){//callback자리에 함수를넣으면,
+            //다 처리한 후 함수 호출시에 파라미터로, 처리한 데이터 결과를 준다.
+            //지금은 AJAX에 처리한 결과를 data라는 변수로 전달한것임.
+
+            console.log(data)
+            console.log(data.time)
+
+        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h1>Test1 HTML</h1>
+
+<button id="btn">CLICK</button>
+
+<div id="result">
+
+</div>
+
+<script>
+  document.querySelector("#btn").addEventListener("click", async function (){
+
+    const r1 = await fetch("/time")
+    const obj = await r1.json()
+
+    console.log(obj)
+
+    // fetch("/time")
+    //     .then((res) => res.json()) //패치가 성공하면 데이터 값을 뽑아와 다 되면
+    //     .then((data) => console.log(data))
+
+
+
+  },false)
+
+</script>
+
+</body>
+</html>

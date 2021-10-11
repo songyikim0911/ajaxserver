@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Store1 HTML PAGE</h1>
+<iframe src="http://192.168.0.52:8080/stores/all"></iframe>
+<script>
+
+  async function loadData(){//await를 쓰기 위해서는 async가 필요!!
+
+    const r1 = await fetch("http://192.168.0.52:8080/stores/all")
+    const obj = await r1.json()
+
+    console.log(obj)
+  }
+
+  loadData()
+
+</script>
+
+</body>
+</html>
